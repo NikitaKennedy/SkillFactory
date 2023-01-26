@@ -1,19 +1,3 @@
-# from bs4 import BeautifulSoup
-# with open('E:/Programs/PycharmProjects/untitled4/test.html', encoding="utf-8") as file:
-#     src = file.read()
-# # print(src)
-# soup = BeautifulSoup(src, 'lxml')
-# a_all = soup.find_all("a")
-#
-# for item in a_all:
-#     item_text = item.text
-#     item_url = item.get("href")
-#     print(f'{item_text}:{item_url}')
-# def sq(atr):
-#     sq = atr*atr
-#     return sq
-# print(sq(5) +1)
-
 # Игра "Крестики - Нолики"
 import random
 from colorama import Fore
@@ -64,52 +48,52 @@ X = '\x1b[44mX'
 O = '\x1b[41mO'
 def check_winner(game_arena):
     if game_arena[0][0] == X and game_arena[0][1] == X and game_arena[0][2] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][0] == O and game_arena[0][1] == O and game_arena[0][2] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[1][0] == X and game_arena[1][1] == X and game_arena[1][2] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[1][0] == O and game_arena[1][1] == O and game_arena[1][2] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[2][0] == X and game_arena[2][1] == X and game_arena[2][2] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[2][0] == O and game_arena[2][1] == O and game_arena[2][2] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[0][0] == X and game_arena[1][0] == X and game_arena[2][0] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][0] == 'O' and game_arena[1][0] == 'O' and game_arena[2][0] == 'O':
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[0][1] == X and game_arena[1][1] == X and game_arena[2][1] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][1] == O and game_arena[1][1] == O and game_arena[2][1] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[0][2] == X and game_arena[1][2] == X and game_arena[2][2] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][2] == O and game_arena[1][2] == O and game_arena[2][2] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[0][0] == X and game_arena[1][1] == X and game_arena[2][2] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][0] == O and game_arena[1][1] == O and game_arena[2][2] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
     elif game_arena[0][2] == X and game_arena[1][1] == X and game_arena[2][0] == X:
-        print('Человек выйграл!')
+        print(Fore.CYAN +'>> Человек выйграл! <<')
         return X
     elif game_arena[0][2] == O and game_arena[1][1] == O and game_arena[2][0] == O:
-        print('Компьютер выйграл!')
+        print(Fore.RED + 'Компьютер выйграл!')
         return O
 
 # Очередность ходов
